@@ -9,16 +9,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace ASD
 {
+    //OOP Concept - Inheritance
+    //The Employees class inherits from the Form clas
     public partial class Employees : Form
     {
+
+        //OOP Concept - Constructor
+        //The constructor Employees() initializes the form and calls the ShowEmployee()
+        //method to display data when the form is loaded
         public Employees()
         {
             InitializeComponent();
             ShowEmployee();
         }
+
+
 
         private void label7_Click(object sender, EventArgs e)
         {
@@ -48,6 +57,7 @@ namespace ASD
 
         private void ShowEmployee()
         {
+            //OOP Concept - Error Handling
             Con.Open();
             string Query = "Select * from EmployeeTb1";
             SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
@@ -64,9 +74,12 @@ namespace ASD
 
 
         //SAve button
+
+        //OOP Concept - Polymorphism (Event Handling)
+        //Polymorphism is demonstrated through event handling methods.Different events(like button clicks or DataGridView cell clicks) trigger different behaviors
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Missing Information");
+            
             if (EmpNameTb.Text == "" || EmpPhoneTb.Text == "" || EmpGenCb.SelectedIndex == -1 || EmpAddTb.Text == "" || EmpSalTb.Text == "" || EmpQualCb.SelectedIndex == -1)
             {
                 MessageBox.Show("Missing Information");
@@ -105,7 +118,8 @@ namespace ASD
 
 
 
-
+        //OOP Concept - Encapsulation
+        //key variable is used internally to track the selected employee's ID
         int key = 0;
         //private void EmployeeDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         //{
@@ -129,7 +143,7 @@ namespace ASD
         //    }
         //}
 
-        private void EmployeeDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void EmployeeDGV_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             // Ensure a valid row is clicked
             if (e.RowIndex >= 0) // Ensures it's not the header row
@@ -169,7 +183,7 @@ namespace ASD
 
 
         //Edit Button
-        private void EditBtn_Click(object sender, EventArgs e)
+        private void EditBtn_Click_1(object sender, EventArgs e)
         {
             if (EmpNameTb.Text == "" || EmpPhoneTb.Text == "" || EmpGenCb.SelectedIndex == -1 || EmpAddTb.Text == "" || EmpSalTb.Text == "" || EmpQualCb.SelectedIndex == -1)
             {
@@ -211,7 +225,7 @@ namespace ASD
 
 
         //Delete Button
-        private void DeleteBtn_Click(object sender, EventArgs e)
+        private void DeleteBtn_Click_1(object sender, EventArgs e)
         {
             if (key == 0)
             {
@@ -257,6 +271,21 @@ namespace ASD
         }
 
         private void SaveBtn_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EmployeeDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
         {
 
         }

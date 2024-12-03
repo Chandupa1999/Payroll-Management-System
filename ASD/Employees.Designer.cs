@@ -53,6 +53,7 @@
             this.EmpNameTb = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +79,7 @@
             this.EmployeeDGV.Name = "EmployeeDGV";
             this.EmployeeDGV.Size = new System.Drawing.Size(235, 233);
             this.EmployeeDGV.TabIndex = 56;
+            this.EmployeeDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EmployeeDGV_CellContentClick_1);
             // 
             // DeleteBtn
             // 
@@ -90,6 +92,7 @@
             this.DeleteBtn.TabIndex = 55;
             this.DeleteBtn.Text = "Delete";
             this.DeleteBtn.UseVisualStyleBackColor = false;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click_1);
             // 
             // EditBtn
             // 
@@ -102,6 +105,7 @@
             this.EditBtn.TabIndex = 54;
             this.EditBtn.Text = "Edit";
             this.EditBtn.UseVisualStyleBackColor = false;
+            this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click_1);
             // 
             // SaveBtn
             // 
@@ -313,6 +317,13 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(8, 605);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(235, 155);
+            this.panel1.TabIndex = 80;
+            // 
             // Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,6 +355,7 @@
             this.Controls.Add(this.EmpGenCb);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.EmpNameTb);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Employees";
             this.Text = "Employees";
@@ -381,5 +393,6 @@
         private System.Windows.Forms.TextBox EmpNameTb;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

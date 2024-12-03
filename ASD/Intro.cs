@@ -21,7 +21,7 @@ namespace ASD
 
             // Initialize and configure the timer
             timer = new Timer();
-            timer.Interval = 3000;  // Timeout interval in milliseconds (e.g., 5000ms = 5 seconds)
+            timer.Interval = 5000;  // Timeout interval in milliseconds (e.g., 5000ms = 5 seconds)
             timer.Tick += Timer_Tick;  // Attach the Tick event handler
             timer.Start();  // Start the timer
         }

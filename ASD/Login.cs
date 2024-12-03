@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace ASD
 {
+    //Class and Objects and inheritance
     public partial class Login : Form
     {
         public Login()
@@ -32,13 +33,15 @@ namespace ASD
             Application.Exit();
         }
 
+
+        //Polymorphism
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             if(UnameTb.Text == "" || UPasswordTb.Text == "")
             {
                 MessageBox.Show("Missing Information");
             }
-            else if(UnameTb.Text == "Email" && UPasswordTb.Text == "Password")
+            else if(UnameTb.Text == "Admin" && UPasswordTb.Text == "Password")
             {
                 Home Obj = new Home();
                 Obj.Show();
