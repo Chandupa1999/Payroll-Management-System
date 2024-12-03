@@ -211,6 +211,7 @@
             this.EmpIdCb.Name = "EmpIdCb";
             this.EmpIdCb.Size = new System.Drawing.Size(205, 21);
             this.EmpIdCb.TabIndex = 35;
+            this.EmpIdCb.SelectedIndexChanged += new System.EventHandler(this.EmpIdCb_SelectedIndexChanged);
             this.EmpIdCb.SelectionChangeCommitted += new System.EventHandler(this.EmpIdCb_SelectionChangeCommitted);
             this.EmpIdCb.SelectedValueChanged += new System.EventHandler(this.EmpIdCb_SelectedValueChanged);
             // 
@@ -244,7 +245,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(268, 512);
+            this.ClientSize = new System.Drawing.Size(251, 495);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AttendanceDGV);

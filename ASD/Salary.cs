@@ -265,9 +265,8 @@ namespace ASD
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            e.Graphics.DrawString("MyCodeSpace LTD", new Font("Averia", 12, FontStyle.Bold), Brushes.Red, new Point(160,25));
-            e.Graphics.DrawString("PayRoll Management System", new Font("Averia", 10, FontStyle.Bold), Brushes.Blue, new Point(125, 45));
-
+            e.Graphics.DrawString("Payroll Management System", new Font("Averia", 12, FontStyle.Bold), Brushes.Red, new Point(160,25));
+            
             string SalNum = SalaryDGV.SelectedRows[0].Cells[0].Value.ToString();
             string EmpId = SalaryDGV.SelectedRows[0].Cells[1].Value.ToString();
             string EmpName = SalaryDGV.SelectedRows[0].Cells[2].Value.ToString();
@@ -288,9 +287,7 @@ namespace ASD
             e.Graphics.DrawString("Total: Rs " + Balance, new Font("Bellota", 8, FontStyle.Bold), Brushes.Blue, new Point(50, 300));
             e.Graphics.DrawString("Period: " + Period, new Font("Bellota", 8, FontStyle.Bold), Brushes.Blue, new Point(50, 330));
 
-            e.Graphics.DrawString("Powered by Chandupa", new Font("Bellota", 12, FontStyle.Bold), Brushes.Crimson, new Point(150, 420));
-            e.Graphics.DrawString("Version 01", new Font("Bellota", 12, FontStyle.Bold), Brushes.Blue, new Point(100, 435));
-
+           
         }
 
         private void SalaryDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)

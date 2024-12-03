@@ -257,5 +257,10 @@ namespace ASD
             Obj.Show();
             this.Hide();
         }
+
+        private void EmpIdCb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
